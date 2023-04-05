@@ -11,6 +11,9 @@ const Header = () => {
       <NavLink to='/blogs' className={({ isActive }) => (isActive ? "active" : "")} exact='true'>
         Blogs
       </NavLink>
+      <NavLink to='/create' className={({ isActive }) => (isActive ? "active" : "")} exact='true'>
+        Create
+      </NavLink>
       <NavLink to='/contact' className={({ isActive }) => (isActive ? "active" : "")}>
         Contact
       </NavLink>

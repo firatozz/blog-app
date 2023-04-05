@@ -6,6 +6,8 @@ import BlogDetailsPage from "./../components/BlogDetailsPage";
 import ContactPage from "./../components/ContactPage";
 import NotFoundPage from "./../components/NotFoundPage";
 import Header from "./../components/Header";
+import AddBlogPage from "../components/AddBlogPage";
+import EditBlogPage from "../components/EditBlogPage";
 
 const AppRouter = () => {
   return (
@@ -14,7 +16,9 @@ const AppRouter = () => {
         <Header></Header>
         <Routes>
           <Route path='/' element={<HomePage />} exact='true'></Route>
-          <Route path='/blogs' element={<BlogListPage />} exact='true'></Route>
+          <Route path='/blogs' element={<BlogListPage />}></Route>
+          <Route path='/create' element={<AddBlogPage />}></Route>
+          <Route path='/edit/:id' element={<EditBlogPage />}></Route>
           <Route path='/blogs/:id' element={<BlogDetailsPage />}></Route>
           <Route path='/contact' element={<ContactPage />}></Route>
           <Route path='*' element={<NotFoundPage />}></Route>
