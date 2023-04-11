@@ -7,7 +7,8 @@ const BlogDetailsPage = (props) => {
   return <BlogDetailsItem {...props.blog} />;
 };
 
-const mapStateToProps = (state) => {
+const mapStateToProps = (state, props) => {
+  console.log(props);
   return {
     blog: state.blogs.find((blog) => {
       return blog.id === useParams().id;
